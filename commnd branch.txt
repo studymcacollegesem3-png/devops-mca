@@ -1,0 +1,146 @@
+S Z:\SEM 3\devopps> git branch
+  main
+  prog1
+* prog2
+PS Z:\SEM 3\devopps> git branch -a
+  main
+  prog1
+* prog2
+  remotes/origin/main
+PS Z:\SEM 3\devopps> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS Z:\SEM 3\devopps> git add .
+warning: in the working copy of 'log.txt', LF will be replaced by CRLF the next time Git touches it
+PS Z:\SEM 3\devopps> git checkout prog1
+Switched to branch 'prog1'
+A       --name
+A       --network
+A       -e
+A       -p
+A       Start-Transcript
+A       demo1.html
+A       docker
+A       log.txt
+A       p1.txt
+PS Z:\SEM 3\devopps> git switch prog1
+Already on 'prog1'
+A       --name
+A       --network
+A       -e
+A       -p
+A       Start-Transcript
+A       demo1.html
+A       docker
+A       log.txt
+A       p1.txt
+PS Z:\SEM 3\devopps> git pull origin prog1
+fatal: couldn't find remote ref prog1
+PS Z:\SEM 3\devopps> git init
+Reinitialized existing Git repository in //comdept/SYMCA/symca50/SEM 3/devopps/.git/
+PS Z:\SEM 3\devopps> git add .
+PS Z:\SEM 3\devopps> git commit -m "correct"
+[prog1 4e85930] correct
+ Committer: symca50 <symca50@server1.dom>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 9 files changed, 21 insertions(+)
+ create mode 100644 --name
+ create mode 100644 --network
+ create mode 100644 -e
+ create mode 100644 -p
+ create mode 100644 Start-Transcript
+ create mode 100644 demo1.html
+ create mode 100644 docker
+ create mode 100644 log.txt
+ create mode 100644 p1.txt
+PS Z:\SEM 3\devopps> git branch 
+  main
+* prog1
+  prog2
+PS Z:\SEM 3\devopps> git branch -M main
+>>
+PS Z:\SEM 3\devopps> git remote add origin https://github.com
+>>
+error: remote origin already exists.
+PS Z:\SEM 3\devopps> git push -u origin main
+>>
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 595 bytes | 99.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/studymcacollegesem3-png/devops-mca.git
+   4f00cbd..4e85930  main -> main
+branch 'main' set up to track 'origin/main'.
+PS Z:\SEM 3\devopps> git branch        
+* main
+  prog2
+PS Z:\SEM 3\devopps> git branch -M prog2
+PS Z:\SEM 3\devopps> git add .
+PS Z:\SEM 3\devopps> git commit -m "prog2"
+[prog2 44846e6] prog2
+ Committer: symca50 <symca50@server1.dom>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 13 insertions(+)
+ create mode 100644 demo2.html
+PS Z:\SEM 3\devopps> git push -u origin prog2
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 219 bytes | 109.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'prog2' on GitHub by visiting:
+remote:      https://github.com/studymcacollegesem3-png/devops-mca/pull/new/prog2
+remote:
+To https://github.com/studymcacollegesem3-png/devops-mca.git
+ * [new branch]      prog2 -> prog2
+branch 'prog2' set up to track 'origin/prog2'.
+PS Z:\SEM 3\devopps> git  status
+On branch prog2
+Your branch is up to date with 'origin/prog2'.
+
+nothing to commit, working tree clean
+PS Z:\SEM 3\devopps> git branch
+>>
+* prog2
+PS Z:\SEM 3\devopps> git push -u origin prog2
+Everything up-to-date
+branch 'prog2' set up to track 'origin/prog2'.
+PS Z:\SEM 3\devopps> git remote -v
+origin  https://github.com/studymcacollegesem3-png/devops-mca.git (fetch)
+origin  https://github.com/studymcacollegesem3-png/devops-mca.git (push)
+PS Z:\SEM 3\devopps> git branch
+* prog2
+PS Z:\SEM 3\devopps> git log --oneline --graph --all
+* 44846e6 (HEAD -> prog2, origin/prog2) prog2
+* 4e85930 (origin/main) correct
+* 4f00cbd first
+PS Z:\SEM 3\devopps> 
